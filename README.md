@@ -33,21 +33,25 @@
 ---
 ### ОТВЕТ НА ЗАДАНИЕ 3. НУЖНА ПОМОЩЬ!!!
 
-#### На этапе выполнения задания №3 не могу отправить лог файлы в Logstash!
+#### На этапе выполнения задания №3 не могу отправить запросы в Logstash и просмотреть их в Kibana!
 
 - Logstach запущен в Docer-compose 
 - Порты проброшены.
 ![Скриншот-3](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img3.png)
 
-- Сервер Nginx запущен
+- Сервер Nginx запущен.
+
 ![Скриншот-4](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img4.png)
 
-- К Kibana доступ есть
+- К Kibana доступ есть.
+
 ![Скриншот-5](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img5.png)
 
 - В меню "Dev Tools" запросы обрабатываются
+
 ` GET /_cluster/health?pretty `
 ![Скриншот-6](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img6.png)
+
 ` GET /_cat/indices `
 ![Скриншот-7](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img7.png)
 
@@ -61,14 +65,14 @@
 ![Скриншот-8](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img10.png)
 
 #### Файлы:
-- [Docker-compose.yml]
-- [Config/Elastics]
-- [Config/Kibana]
-- [Config/Logstash]
-- [Config/Nginx]
+- [Docker-compose.yml](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/docker-compose.yml)
+- [Config/Elastics](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/elasticsearch/config.yml)
+- [Config/Kibana](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/kibana/configs.yml)
+- [Config/Logstash](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/logstash/piplines.yml)
+- [Config/Nginx](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/logstash/piplines/nginx.yml))
 ---
 
-### Задание 4. Filebeat. 
+### Задание 4. Filebeat. ` НЕ ПРИСТУПАЛ ` 
 
 Установите и запустите Filebeat. Переключите поставку логов Nginx с Logstash на Filebeat. 
 
