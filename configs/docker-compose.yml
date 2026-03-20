@@ -1,0 +1,56 @@
+services:
+  # Elasticsearch Docker Images: https://www.docker.elastic.co/
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.16.1
+    container_name: elasticsearch-kyv
+    environment:
+      - cluster.name=kupriyanov-elk
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    volumes:
+      - ./configs/elasticsearch/config.yml:/user/share/elasticsearch/config/elasticsearch.yml
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+
+  kibana:
+    container_name: kibana-kyv
+    image: docker.elastic.co/kibana/kibana:7.16.1
+    volumes:
+      - ./configs/kibana/config.yml:/usr/share/kibana/config/kibana.yml
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+
+  logstash:
+    container_name: logstash-kyv
+    image: docker.elastic.co/logstash/logstash:7.16.1
+    environment:
+      XPACK_MONITORING_ENABLED: "false"
+      ES_HOST: "elasticsearch:9200"  
+    ports:
+       - "5044:5044"
+    volumes:
+      - ./configs/logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml
+      - ./configs/logstash/pipelines:/usr/share/logstash/config/pipelines
+    depends_on:
+      - elasticsearch
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginxlogs:/var/log/nginx
+
+volumes:
+  elasticsearch-data:
+    driver: local
+
+
+# echo '192.168.0.1 internal 500' | nc -u localhost 5044
+
+# curl http://localhost:9200/_cluster/health?pretty

@@ -21,7 +21,7 @@
 
 ---
 ### ОТВЕТ НА ЗАДАНИЕ 2.
-![Скриншот-1](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img2.png)
+![Скриншот-2](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img2.png)
 
 ---
 ### Задание 3. Logstash
@@ -30,6 +30,42 @@
 
 *Приведите скриншот интерфейса Kibana, на котором видны логи Nginx.*
 
+---
+### ОТВЕТ НА ЗАДАНИЕ 3. НУЖНА ПОМОЩЬ!!!
+
+#### На этапе выполнения задания №3 не могу отправить лог файлы в Logstash!
+
+- Logstach запущен в Docer-compose 
+- Порты проброшены.
+![Скриншот-3](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img3.png)
+
+- Сервер Nginx запущен
+![Скриншот-4](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img4.png)
+
+- К Kibana доступ есть
+![Скриншот-5](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img5.png)
+
+- В меню "Dev Tools" запросы обрабатываются
+` GET /_cluster/health?pretty `
+![Скриншот-6](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img6.png)
+` GET /_cat/indices `
+![Скриншот-7](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img7.png)
+
+- В меню "Stack Managemet - Kibana/Index Patern" не могу выбрать ничего кроме `filebeat-%{[agent.version]}-2026.03.1`.
+![Скриншот-8](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img8.png)
+
+- В меню "Analytics/Discovery" при запросе в Logstash ничего не отбражается. В принципе ничего не отображается.
+![Скриншот-8](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img9.png)
+
+- Командой `echo '192.168.0.1 internal 500' | nc localhost 5044` пытался отправить принудительный запрос в Logstash, но в логах Logstash ничего не отображается.
+![Скриншот-8](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img10.png)
+
+#### Файлы:
+- [Docker-compose.yml]
+- [Config/Elastics]
+- [Config/Kibana]
+- [Config/Logstash]
+- [Config/Nginx]
 ---
 
 ### Задание 4. Filebeat. 
