@@ -67,9 +67,9 @@
 #### Файлы:
 - [Docker-compose.yml](configs/docker-compose.yml)
 - [Config/Elastics](configs/elasticsearch/config.yml)
-- [Config/Kibana](configs/kibana/configs.yml)
-- [Config/Logstash](configs/logstash/piplines.yml)
-- [Config/Nginx](configs/logstash/piplines/nginx.yml)
+- [Config/Kibana](configs/kibana/config.yml)
+- [Config/Logstash](configs/logstash/pipelines.yml)
+- [Config/Nginx](configs/logstash/pipelines/nginx.conf)
 ---
 
 ### Задание 4. Filebeat. ` НЕ ПРИСТУПАЛ ` 
