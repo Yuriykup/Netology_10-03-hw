@@ -65,7 +65,7 @@
 ![Скриншот-8](https://github.com/Yuriykup/Netology_10-03-hw/blob/main/img/img10.png)
 
 #### Файлы:
-- [Docker-compose.yml](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/docker-compose.yml)
+- [Docker-compose.yml](configs/docker-compose.yml)
 - [Config/Elastics](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/elasticsearch/config.yml)
 - [Config/Kibana](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/kibana/configs.yml)
 - [Config/Logstash](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/logstash/piplines.yml)
