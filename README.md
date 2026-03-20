@@ -70,6 +70,7 @@
 - [Config/Kibana](configs/kibana/config.yml)
 - [Config/Logstash](configs/logstash/pipelines.yml)
 - [Config/Nginx](configs/logstash/pipelines/nginx.conf)
+- [Log_Logstash](configs/logstash-kyv.txt)
 ---
 
 ### Задание 4. Filebeat. ` НЕ ПРИСТУПАЛ ` 
