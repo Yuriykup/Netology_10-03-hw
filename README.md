@@ -66,10 +66,10 @@
 
 #### Файлы:
 - [Docker-compose.yml](configs/docker-compose.yml)
-- [Config/Elastics](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/elasticsearch/config.yml)
-- [Config/Kibana](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/kibana/configs.yml)
-- [Config/Logstash](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/logstash/piplines.yml)
-- [Config/Nginx](https://github.com/Yuriykup/Netology_10-03-hw/tree/main/configs/logstash/piplines/nginx.yml))
+- [Config/Elastics](configs/elasticsearch/config.yml)
+- [Config/Kibana](configs/kibana/configs.yml)
+- [Config/Logstash](configs/logstash/piplines.yml)
+- [Config/Nginx](configs/logstash/piplines/nginx.yml)
 ---
 
 ### Задание 4. Filebeat. ` НЕ ПРИСТУПАЛ ` 
